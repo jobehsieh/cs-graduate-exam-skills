@@ -12,13 +12,15 @@
 | **mock-exam-generator** | 依考卷格式規格生成模擬試題卷＋解答卷（PDF，含計分） | `skills/mock-exam-generator/` |
 | **exam-materials-research** | 研究各科應試教材/題庫（電子檔＋解答管道） | `skills/exam-materials-research/` |
 | **md-to-pdf** | Markdown→PDF（MathJax 公式＋中文）與 PDF 文字抽取工具 | `skills/md-to-pdf/` |
+| **exam-paper-format-ocr** | 掃描型考古題 PDF 之卷面格式視覺辨識（Groq Vision OCR） | `skills/exam-paper-format-ocr/` |
 
 ## 快速開始
 
 1. **收集考古題**：載入 `cs-grad-exam-archiver`，依各校官方系統下載並歸檔。
-2. **研究教材**：載入 `exam-materials-research`，取得各科題庫與教材來源。
-3. **生成考卷**：載入 `mock-exam-generator`（先讀其內附 `EXAM_SPEC.md` 與 `EXAM_PROMPT.md`），生成試題卷＋解答卷。
-4. **輸出 PDF**：用 `md-to-pdf` 把 Markdown 考卷轉為 A4 PDF。
+2. **辨識考卷格式**：掃描型考古題 PDF 用 `exam-paper-format-ocr`（Groq Vision OCR）確認卷面格式。
+3. **研究教材**：載入 `exam-materials-research`，取得各科題庫與教材來源。
+4. **生成考卷**：載入 `mock-exam-generator`（先讀其內附 `EXAM_SPEC.md` 與 `EXAM_PROMPT.md`），生成試題卷＋解答卷。
+5. **輸出 PDF**：用 `md-to-pdf` 把 Markdown 考卷轉為 A4 PDF。
 
 ## 目錄結構
 
@@ -32,6 +34,7 @@ cs-graduate-exam-skills/
     ├── cs-grad-exam-archiver/SKILL.md
     ├── mock-exam-generator/        # SKILL.md + EXAM_SPEC.md + EXAM_PROMPT.md
     ├── exam-materials-research/SKILL.md
+    ├── exam-paper-format-ocr/      # SKILL.md + vision.py + requirements.txt
     └── md-to-pdf/                  # SKILL.md + md2pdf.py + pdf_extract.py
 ```
 
