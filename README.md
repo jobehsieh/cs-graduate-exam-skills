@@ -27,7 +27,7 @@ cs-graduate-exam-skills/
 ├── README.md
 ├── docs/
 │   ├── PROJECT_INDEX.md            # 專案檔案索引
-│   └── 教材與題庫總清單.md         # 各科教材/題庫/管道
+│   └── materials-and-textbooks.md  # 各科教材/題庫/管道
 └── skills/
     ├── cs-grad-exam-archiver/SKILL.md
     ├── mock-exam-generator/        # SKILL.md + EXAM_SPEC.md + EXAM_PROMPT.md
